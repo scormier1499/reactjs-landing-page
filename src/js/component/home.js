@@ -12,51 +12,53 @@ export function Home() {
 		{ label: "Services", url: "#services" },
 		{ label: "Contact", url: "#contact" }
 	];
+	const cardContent = [
+		{
+			title: "Card Title",
+			description:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+			buttonLabel: "Find out more!",
+			buttonURL: "#"
+		},
+		{
+			title: "Card Title",
+			description:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+			buttonLabel: "Find out more!",
+			buttonURL: "#"
+		},
+		{
+			title: "Card Title",
+			description:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+			buttonLabel: "Find out more!",
+			buttonURL: "#"
+		},
+		{
+			title: "Card Title",
+			description:
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+			buttonLabel: "Find out more!",
+			buttonURL: "#"
+		}
+	];
 	return (
 		<div>
 			<MyNavbar menu={links} brand="Start Bootstrap" />
+
 			<Jumbotron
 				title="A Warm Welcome!"
 				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 				buttonURL="#"
 				buttonLabel="call to action!"
 			/>
+
 			<div className="container">
-				<div className="row justify-content-center">
-					<div className="col-lg-3 col-12 mb-2">
-						<Card
-							title="Card Title"
-							description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-							buttonURL="#"
-							buttonLabel="Find out more!"
-						/>
-					</div>
-					<div className="col-lg-3 col-12 mb-2">
-						<Card
-							title="Card Title"
-							description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-							buttonURL="#"
-							buttonLabel="Find out more!"
-						/>
-					</div>
-					<div className="col-lg-3 col-12 mb-2">
-						<Card
-							title="Card Title"
-							description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-							buttonURL="#"
-							buttonLabel="Find out more!"
-						/>
-					</div>
-					<div className="col-lg-3 col-12 mb-2">
-						<Card
-							title="Card Title"
-							description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-							buttonURL="#"
-							buttonLabel="Find out more!"
-						/>
-					</div>
+				<div className="row">
+					<Card cardContent={cardContent} />
 				</div>
 			</div>
+
 			<Footer />
 		</div>
 	);
